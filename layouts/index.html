@@ -1,7 +1,17 @@
 {{ partial "head" . }}
 
 <body class="home-template"><div class="site-wrapper">
-
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 {{ partial "header" . }}
 
 <main id="site-main" class="site-main outer" role="main">
