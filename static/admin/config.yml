@@ -14,3 +14,4 @@ collections:
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Link title", name: "linktitle", widget: "string"}
     - {label: "Image", name: "image", widget: "image"}
+    - {label: "Body", name: "body", widget: "markdown"}
